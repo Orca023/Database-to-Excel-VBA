@@ -11,5 +11,7 @@ C:\> C:\Database-to-Excel-VBA\MongoDB\mongosh\mongosh.exe mongodb://[::1]:27017/
 test> use Database1
 4、創建名爲「Collection1」的數據集合（數據表）：
 Database1> db.createCollection("Collection1")
+5、退出 MongoDB 資料庫的用戶端「mongosh」應用：
+Database1> exit
 
 二、或下載開箱即用 ( out of the box ) ( portable application ) 已配置壓縮檔「data-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip」解壓縮，將其保存至檔案夾 ( folder ) :「Database-to-Excel-VBA/MongoDB/data/」内自行安裝配置至該路徑即可.
