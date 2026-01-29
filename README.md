@@ -1167,93 +1167,26 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
 5. 壓縮檔 : `Server-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`
 
-壓縮檔「`Server-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫 MongoDB 伺服器端應用 'mongod.exe' 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MongoDB/Server/` 内，最終完整路徑應爲「`Database-to-Excel-VBA/MongoDB/Server/8.2/bin/mongod.exe`」，即可使用如下指令啓動運行資料庫 MongoDB 伺服器 : 
+壓縮檔「`Server-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MongoDB 伺服器端二進位可執行啓動檔 'mongod.exe' 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MongoDB/Server/` 内，最終完整路徑應爲「`Database-to-Excel-VBA/MongoDB/Server/8.2/bin/mongod.exe`」，即可使用如下指令啓動運行資料庫 MongoDB 伺服器應用 : 
 ```
 C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/Server/8.2/bin/mongod.exe --config=C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/mongod.cfg
 ```
 
-6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz`
+6. 壓縮檔 : `mongosh_2.6.0-Window10-AMD_FX8800P_x86_64.zip`
 
-壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'StatisticalServer'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
+壓縮檔「`mongosh_2.6.0-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MongoDB 用戶端二進位可執行啓動檔 'mongosh.exe' 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MongoDB/mongosh/` 内，最終完整路徑應爲「`Database-to-Excel-VBA/MongoDB/mongosh/mongosh.exe`」，即可使用如下指令啓動運行資料庫 MongoDB 用戶端應用 : 
 ```
-root@localhost:~# tar -zxvf /home/google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz
-```
-最終應保存爲檔案夾 ( folder ) : `/home/StatisticalServer/` 形式.
-
-然後，再使用如下指令修改批處理 ( Bash ) 脚本「`startServer.sh`」和二進位可執行檔「`StatisticalServer.exe`」的權限爲所有用戶可運行 :
-```
-root@localhost:~# chmod 777 /home/StatisticalServer/startServer.sh
-```
-```
-root@localhost:~# chmod 777 /home/StatisticalServer/StatisticalServer.exe
-```
-使用如下指令修改參數配置文檔「`/home/StatisticalServer/config.txt`」「`/home/StatisticalServer/StatisticalServerJulia/config.txt`」「`/home/StatisticalServer/StatisticalServerPython/config.txt`」和代碼脚本檔 ( Script file ) 「`/home/StatisticalServer/StatisticalServerJulia/src/Interface.jl`」「`/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl`」「`/home/StatisticalServer/StatisticalServerJulia/src/Router.jl`」「`/home/StatisticalServer/StatisticalServerJulia/src/Interpolation_Fitting.jl`」「`/home/StatisticalServer/StatisticalServerPython/src/Interface.py`」「`/home/StatisticalServer/StatisticalServerPython/src/StatisticalAlgorithmServer.py`」「`/home/StatisticalServer/StatisticalServerPython/src/Router.py`」「`/home/StatisticalServer/StatisticalServerPython/src/Interpolation_Fitting.py`」的權限爲所有用戶可讀可寫 :
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/src/Interface.jl
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/src/Router.jl
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/src/Interpolation_Fitting.jl
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/src/Interface.py
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/src/StatisticalAlgorithmServer.py
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/src/Router.py
-```
-```
-root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/src/Interpolation_Fitting.py
-```
-然後，即可使用如下指令啓動運行統計運算伺服器「'StatisticalServer'」項目 : 
-
-程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
-```
-root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
-```
-root@localhost:~# /usr/bin/python3 /home/StatisticalServer/StatisticalServerPython/src/StatisticalAlgorithmServer.py configFile=/home/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-使用 Shell 語言脚本「`startServer.sh`」啓動，使用如下指令 : 
-```
-root@localhost:~# /bin/bash /home/StatisticalServer/startServer.sh configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-使用二進位可執行檔「`StatisticalServer.exe`」啓動，使用如下指令 : 
-```
-root@localhost:~# /home/StatisticalServer/StatisticalServer.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/mongosh/mongosh.exe mongodb://username:password@[::1]:27017/Database1
 ```
 
-7. 二進位可執行檔 : `StatisticalServer-Window10-AMD_FX8800P_x86_64.exe`
+7. 壓縮檔 : `data-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`
 
-二進位可執行檔「`StatisticalServer-Window10-AMD_FX8800P_x86_64.exe`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器「'StatisticalServer'」項目内 C 語言源代碼檔「'StatisticalServer/c/c2exe.c'」使用 Window10 - MinGW-w64 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `C:/StatisticalServer/` 内，使用如下指令將其重命名 :
-```
-C:\StatisticalServer> rename C:/StatisticalServer/StatisticalServer-Window10-AMD_FX8800P_x86_64.exe C:/StatisticalServer/StatisticalServer.exe
-```
-8. 二進位可執行檔 : `StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
+壓縮檔「`data-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MongoDB 伺服器端自定義創建的名爲 'Database1' 資料庫 ( Database ) , 内含名爲 'Collection1' 自定義數據集 ( Collection/Table ) , 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MongoDB/data/` 内，可使用資料庫 MongoDB 用戶端應用鏈接伺服器之後，操作處理增、刪、改、查資料集合.
 
-二進位可執行檔「`StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'StatisticalServer'」項目内 C 語言源代碼檔「'StatisticalServer/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/StatisticalServer/` 内，使用如下指令將其重命名 :
+8. 壓縮檔 : `MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`
+
+壓縮檔「`MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MariaDB 伺服器端二進位可執行啓動檔 'mysqld.exe' 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MariaDB/MariaDB10.11/` 内，最終完整路徑應爲「`Database-to-Excel-VBA/MariaDB/MariaDB10.11/bin/mysqld.exe`」，即可使用如下指令啓動運行資料庫 MongoDB 伺服器應用 : 
 ```
-root@localhost:~# /home/StatisticalServer/StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe /home/StatisticalServer/StatisticalServer.exe
-```
-再使用如下指令修改其權限爲所有用戶可運行 :
-```
-root@localhost:~# chmod 777 /home/StatisticalServer/StatisticalServer.exe
+C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/MariaDB/MariaDB10.11/bin/mysqld.exe
 ```
 即可.
