@@ -1,25 +1,7 @@
-# Database-to-Excel-VBA
-使用電子表格 ( Microsoft Office Excel ) 訪問資料庫 ( Microsoft Access , MongoDB , MariaDB ) 實現增、刪、改、查等操作. Microsoft Office Excel client to Database ( Microsoft Access , MongoDB , MariaDB ) operate CRUD ( Create , Read , Update , Delete ).
-
-
-
----
-
-開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1jLLxakrQrE8wpXHlr9GX4w?pwd=yyrf) 下載頁: 
-https://pan.baidu.com/s/1jLLxakrQrE8wpXHlr9GX4w?pwd=yyrf
-
-提取碼：yyrf
-
-開箱即用 ( out of the box ) ( portable application ) 檔 :
-
-1. 壓縮檔 : `Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`
-
-
-
-
-## 統計運算伺服器 StatisticalServer : StatisticalServerJulia , StatisticalServerPython
-#### Julia , Python
-#### 使用「Criss」倉庫 ( repositories ) 「Interface.jl」或「Interface.py」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
+## Microsoft Office Excel client to Database
+#### Microsoft Office Excel , Microsoft Access , MongoDB , MariaDB
+#### 使用電子表格 ( Microsoft Office Excel ) 作爲用戶端訪問資料庫 ( Microsoft Access , MongoDB , MariaDB ) 實現新增、刪除、修改、查找資料等操作.
+#### Microsoft Office Excel client to Database ( Microsoft Access , MongoDB , MariaDB ) operate CRUD ( Create , Read , Update , Delete ).
 
 ---
 
@@ -1293,5 +1275,17 @@ root@localhost:~# /home/StatisticalServer/StatisticalServer_google-pixel-2_andro
 root@localhost:~# chmod 777 /home/StatisticalServer/StatisticalServer.exe
 ```
 即可.
+
+
+
+開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1jLLxakrQrE8wpXHlr9GX4w?pwd=yyrf) 下載頁: 
+https://pan.baidu.com/s/1jLLxakrQrE8wpXHlr9GX4w?pwd=yyrf
+
+提取碼：yyrf
+
+開箱即用 ( out of the box ) ( portable application ) 檔 :
+
+1. 壓縮檔 : `Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`
+
 
 
