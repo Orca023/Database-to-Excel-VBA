@@ -5,9 +5,6 @@
 
 ---
 
-
-
-
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;></p>
 
 項目使用了微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用的第三方擴展 :  `clsBrowser.cls` , `clsCore.cls` , `clsJsConverter.cls` 三個類模組，由 codeproject 網站發佈取得.
@@ -22,45 +19,69 @@ https://github.com/VBA-tools/VBA-JSON.git
 
 ---
 
-一. 確保 Microsoft Window10 系統的 Edge 瀏覽器已全部關閉, 啓動 Microsoft Office Excel 應用.
+一. 確保 Microsoft Window11 系統的 Access 資料庫已安裝配置成功，和 MongoDB , MariaDB 資料庫的伺服端應用 ( Server ) 已安裝配置成功且已啓動運行，啓動 Microsoft Office Excel 應用.
 
-二. 手動操作 Microsoft Excel 應用, 載入文件夾 `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/` 裏的 Microsoft Excel VBA 類模組 ( Class Modul ) : `clsBrowser.cls` , `clsCore.cls` , `clsJsConverter.cls`
+二. 手動操作 Microsoft Excel 應用, 載入文件夾 `./Database-to-Excel-VBA/CDPimport/` 裏的 Microsoft Excel VBA 類模組 ( Class Modul ) : `clsBrowser.cls` , `clsCore.cls` , `clsJsConverter.cls`
 
-三. 手動操作 Microsoft Excel 應用, 載入文件夾 `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/` 裏的 Microsoft Excel VBA 窗體 ( Form ) : `CrawlerControlPanel.frm` , `CrawlerControlPanel.frx`
+三. 手動操作 Microsoft Excel 應用, 載入文件夾 `./Database-to-Excel-VBA/` 裏的 Microsoft Excel VBA 窗體 ( Form ) : `DatabaseControlPanel.frm` , `DatabaseControlPanel.frx`
 
-四. 手動操作 Microsoft Excel 應用, 載入文件夾 `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/` 裏的 Microsoft Excel VBA 模組 ( Module ) : `CrawlerDispatchModule.bas`
+四. 手動操作 Microsoft Excel 應用, 載入文件夾 `./Database-to-Excel-VBA/` 裏的 Microsoft Excel VBA 模組 ( Module ) : `DatabaseDispatchModule.bas`
 
-五. 手動操作 Microsoft Excel 應用, 載入文件夾 `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/` 裏的 Microsoft Excel VBA 模組 ( Module ) : `testCrawlerModule.bas`
+五. 手動操作 Microsoft Excel 應用, 載入文件夾 `./Database-to-Excel-VBA/` 裏的 Microsoft Excel VBA 模組 ( Module ) : `DatabaseModule.bas`
 
-六. 手動操作 Microsoft Excel 應用, 載入文件夾 `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/` 裏的 Microsoft Excel VBA 對象 ( Object ) : `ThisWorkbook.cls`
+六. 手動操作 Microsoft Excel 應用, 載入文件夾 `./Database-to-Excel-VBA/` 裏的 Microsoft Excel VBA 模組 ( Module ) : `DatabaseMongoDB.bas`
 
-七. 啓動運行測試網站 :  `root@localhost:~# /bin/node ./focused-crawling-Microsoft-Office-Excel-VBA-Edge/testWeb/server.js`
+七. 手動操作 Microsoft Excel 應用, 載入文件夾 `./Database-to-Excel-VBA/` 裏的 Microsoft Excel VBA 模組 ( Module ) : `DatabaseMariaDB.bas`
 
-八. 運行 Microsoft Excel VBA 宏擴展應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 選擇 `test` 選項, 從 Microsoft Excel 應用的「`加載項 ( add-in )`」菜單裏, 選擇 : 「 `Focused Crawling` 」 → 「 `operation panel` 」 → 「 `test` 」, 加載顯示 `test` 人機交互介面.
+八. 手動操作 Microsoft Excel 應用, 載入文件夾 `./Database-to-Excel-VBA/` 裏的 Microsoft Excel VBA 對象 ( Object ) : `ThisWorkbook.cls`
 
-九. 測試 Microsoft Excel VBA 宏擴展應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 操控讀取測試網站 `testWeb` 頁面顯示的資訊, 將讀取結果存儲在電子表格 ( Microsoft Excel ) 指定位置.
+九. 啓動 MongoDB 資料庫的伺服端應用 ( Server ) 伺服器 :
+```
+`C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/Server/8.2/bin/mongod.exe --config=C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/mongod.cfg`
+```
+
+十. 啓動自定義的操作 MongoDB 資料庫的 Node.js 伺服器 :
+```
+`C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/Nodejs/Nodejs-22.20.0/node.exe C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1`
+```
+
+十一. 啓動 MariaDB 資料庫的伺服端應用 ( Server ) 伺服器 :
+```
+`C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/MariaDB/MariaDB10.11/bin/mysqld.exe`
+```
+
+十二. 啓動自定義的操作 MariaDB 資料庫的 Python 伺服器 :
+```
+C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/Scripts/python.exe C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+```
+或者 : 
+```
+C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/python.exe C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+```
+
+十三. 運行 Microsoft Office Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 選擇 `operation panel` 選項, 從 Microsoft Excel 應用的「`加載項 ( add-in )`」菜單裏, 選擇 : 「 `Manipulate database` 」 → 「 `operation panel` 」, 加載顯示 `operation panel` 人機交互介面.
+
+十四. 測試 Microsoft Office Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 項目使用電子表格 ( Microsoft Office Excel ) 鏈接 `Microsoft Access , MongoDB , MariaDB` 等資料庫 , 通過讀取在電子表格 ( Microsoft Office Excel ) 指定位置的操作指令，實現新增 ( Create )、刪除 ( Delete )、修改 ( Update )、查找 ( Read ) 資料等操作, 將讀取結果存儲在電子表格 ( Microsoft Office Excel ) 指定位置.
 
 ---
 
-項目空間裏的電子表格 Microsoft Excel 檔 : 「 `Crawler.xlsm` 」 已經載入 :
+項目空間裏的電子表格 Microsoft Office Excel 檔 : 「 `Database.xlsm` 」 已經載入 :
 
 第三方類模組 ( Class Modul ) : `clsBrowser.cls` , `clsCore.cls` , `clsJsConverter.cls`
 
-窗體 ( Form ) : `CrawlerControlPanel.frm` , `CrawlerControlPanel.frx`
+窗體 ( Form ) : `DatabaseControlPanel.frm` , `DatabaseControlPanel.frx`
 
-模組 ( Module ) : `CrawlerDispatchModule.bas` , `testCrawlerModule.bas`
+模組 ( Module ) : `DatabaseDispatchModule.bas` , `DatabaseModule.bas` , `DatabaseMongoDB.bas` , `DatabaseMariaDB.bas`
 
 對象 ( Object ) : `ThisWorkbook.cls`
 
-可直接從 Microsoft Excel 應用的「`加載項 ( add-in )`」菜單裏, 選擇 : 「 `Focused Crawling` 」 → 「 `operation panel` 」 → 「 `test` 」, 加載顯示 `test` 人機交互介面.
+可直接從 Microsoft Office Excel 應用的「`加載項 ( add-in )`」菜單裏, 選擇 : 「 `Manipulate database` 」 → 「 `operation panel` 」, 加載顯示 `operation panel` 人機交互介面.
 
-祇需啓動運行測試網站 :  `root@localhost:~# /bin/node ./focused-crawling-Microsoft-Office-Excel-VBA-Edge/testWeb/server.js`
-
-之後即可測試 Microsoft Excel VBA 宏擴展應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 操控讀取測試網站 `testWeb` 頁面顯示的資訊, 將讀取結果存儲在電子表格 ( Microsoft Excel ) 指定位置.
+之後即可測試使用電子表格 ( Microsoft Office Excel VBA ) 鏈接 `Microsoft Access , MongoDB , MariaDB` 等資料庫 , 通過讀取在電子表格 ( Microsoft Office Excel ) 指定位置的操作指令，實現新增 ( Create )、刪除 ( Delete )、修改 ( Update )、查找 ( Read ) 資料等操作, 將讀取結果存儲在電子表格 ( Microsoft Office Excel ) 指定位置.
 
 ---
 
-使用微軟電子表格 Microsoft Excel VBA 驅動瀏覽器 Microsoft Edge 宏應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 説明 :
+使用微軟電子表格 Microsoft Office Excel VBA 鏈接 `Microsoft Access , MongoDB , MariaDB` 等資料庫 , 通過讀取在電子表格 ( Microsoft Office Excel ) 指定位置的操作指令，實現新增 ( Create )、刪除 ( Delete )、修改 ( Update )、查找 ( Read ) 資料等操作説明 :
 
 1. 項目架構執行序 :
 
@@ -146,7 +167,7 @@ Mozilla Firefox ( Gecko ) x86_64 version 128.0 2024/07/09
 
 Interpreter :
 
-Node.js - version 20.15.0
+Node.js - version 22.20.0
 
 npm - version 10.7.0
 
@@ -360,6 +381,31 @@ Interpreter: Python-3.12.4-tar.xz
 
 ![]()
 
+
+
+---
+
+Interpreter :
+
+Node.js - 22.20.0
+
+[程式設計 JavaScript 語言解釋器 ( Interpreter ) 之 Node.js 官方網站](https://node.js.org/): 
+https://node.js.org/
+
+[程式設計 JavaScript 語言解釋器 ( Interpreter ) 之 Node.js 官方網站](https://nodejs.org/en/): 
+https://nodejs.org/en/
+
+[程式設計 JavaScript 語言解釋器 ( Interpreter ) 之 Node.js 官方下載頁](https://nodejs.org/en/download/package-manager): 
+https://nodejs.org/en/download/package-manager
+
+[程式設計 JavaScript 語言解釋器 ( Interpreter ) 之 Node.js 官方 GitHub 網站賬戶](https://github.com/nodejs): 
+https://github.com/nodejs
+
+[程式設計 JavaScript 語言解釋器 ( Interpreter ) 之 Node.js 官方 GitHub 網站倉庫](https://github.com/nodejs/node): 
+https://github.com/nodejs/node.git
+
+---
+
 Interpreter :
 
 python - 3.12.4
@@ -472,6 +518,10 @@ https://docs.sympy.org/latest/index.html
 
 [Python - sympy 官方 GitHub 網站倉庫頁](https://github.com/sympy/sympy): 
 https://github.com/sympy/sympy.git
+
+
+
+
 
 ![]()
 
