@@ -334,7 +334,7 @@ https://github.com/nodejs
 [程式設計 JavaScript 語言解釋器 ( Interpreter ) 之 Node.js 官方 GitHub 網站倉庫](https://github.com/nodejs/node): 
 https://github.com/nodejs/node.git
 
-Interpreter : python
+Interpreter : Python
 
 [程式設計 Python 語言解釋器 ( Interpreter ) 官方網站](https://www.python.org/): 
 https://www.python.org/
