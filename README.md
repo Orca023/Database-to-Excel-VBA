@@ -147,19 +147,21 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
    將從資料庫 MariaDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
-2. 項目將自定義的操作模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 作爲獨立的一個模組 ( Module ) 設計, 目的是, 與調度模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerDispatchModule.bas` ) 分開, 解耦合, 這樣便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
+2. 項目將自定義的操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 分別作爲獨立的一個模組 ( Module ) 設計, 目的是, 與調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 分開, 解耦合, 這樣便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
 
-   同樣的, 項目將調度模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerDispatchModule.bas` ) 作爲獨立的一個模組 ( Module ) 設計, 與窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/CrawlerControlPanel.frx` ) , ( `./Database-to-Excel-VBA/CrawlerControlPanel.frm` ) 分開, 其目的也是爲了, 解耦合, 便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
+   同樣的, 項目將調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 作爲獨立的一個模組 ( Module ) 設計, 與窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 分開, 其目的也是爲了, 解耦合, 便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
 
-   若不考慮日後的功能擴展, 可取消獨立的調度模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerDispatchModule.bas` ) 設計, 將之全部功能, 整合入窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/CrawlerControlPanel.frx` ) , ( `./Database-to-Excel-VBA/CrawlerControlPanel.frm` ) 裏, 這樣可降低項目架構的複雜性, 更易於理解.
+   若不考慮日後的功能擴展, 可取消獨立的調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 設計, 將之全部功能, 整合入窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏, 這樣可降低項目架構的複雜性, 更易於理解.
 
-4. 若想擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面, 可新增複製 `test/` 文件夾並重新命名, 保存路徑位於 `./Database-to-Excel-VBA/CrawlerStrategyServer/` 文件夾裏, 重新命名並自定義修改文件夾 `test/` 裏的模組 ( Module ) : `testCrawlerModule.bas` , 根據需要自定義修改設計編寫代碼脚本即可, 這一操作的目的, 是爲實現新增一組操作介面的效果, 例如像 ( `./Database-to-Excel-VBA/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
+3. 若想擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多種資料庫 ( Database ) 軟體, 可新增複製模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 或 ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 並自定義重新命名 , 修改模組 ( Module ) 裏的 Sub Run_MongoDB 或 Sub Run_MariaDB 子過程 , 根據需要自定義修改設計編寫代碼脚本即可, 這一操作的目的, 是爲實現新增一組操作介面的效果, 例如像 ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 或 ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 類似的.
 
-   并且, 需要修改調度模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerDispatchModule.bas` ) 裏的代碼, 使其可以正確找到調用自定義擴展新增的操作模組 ( Module ) 並正確的讀取適配合規的自定義擴展新增的配置參數初值, 例如像 ( `./Database-to-Excel-VBA/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
+   并且, 需要修改調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 裏的代碼, 使其可以正確找到調用自定義擴展新增的操作模組 ( Module ) 並正確的讀取適配合規的自定義擴展新增的配置參數初值, 例如像 ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 類似的.
 
-   并且, 需要修改窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/CrawlerControlPanel.frx` ) , ( `./Database-to-Excel-VBA/CrawlerControlPanel.frm` ) 裏的代碼, 使其可以正確適配合規的顯示自定義擴展新增的模組 ( Module )的配置參數值, 作爲人機交互介面, 可以正確的操控自定義擴展新增的模組 ( Module ) 引用第三方類模組 ( Class Modul ) : `clsBrowser.cls` , `clsCore.cls` , `clsJsConverter.cls` 驅動 Microsoft Edge 瀏覽器, 例如像 ( `./Database-to-Excel-VBA/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
+   并且, 需要修改操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的代碼, 使其可以正確找到調用自定義擴展新增的操作模組 ( Module ) 並正確的調用運行因應子過程 ( Sub ) 的脚本代碼, 例如像 ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 或 ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 類似的.
 
-5. 項目空間裏的文件夾 `testWeb` 祇是一組用於配合測試電子表格 Microsoft Excel VBA 驅動瀏覽器 Microsoft Edge 宏應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 框架基礎功能的網站頁面, 主要用於開發階段的測試之用, 當 `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 的策略介面選擇 `test` 選項加載顯示 `test` 人機交互介面時, 才需要啓動運行 `testWeb` 伺服器, 定型之後生產階段則不再需要; 若不需要測試框架基礎功能, 可將文件夾 `testWeb` 刪除, 不會影響 電子表格 Microsoft Excel VBA 驅動瀏覽器 Microsoft Edge 宏應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 的功能.
+   并且, 需要修改窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏的代碼, 使其可以正確適配合規的顯示自定義擴展新增的模組 ( Module )的配置參數值, 作爲人機交互介面, 可以正確的操控自定義擴展新增的模組 ( Module ) 引用第三方類模組 ( Class Modul ) : `clsBrowser.cls` , `clsCore.cls` , `clsJsConverter.cls` 處理資料, 例如像 ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 或 ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 類似的.
+
+4. 項目空間裏的文件夾 `testWeb` 祇是一組用於配合測試電子表格 Microsoft Excel VBA 驅動瀏覽器 Microsoft Edge 宏應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 框架基礎功能的網站頁面, 主要用於開發階段的測試之用, 當 `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 的策略介面選擇 `test` 選項加載顯示 `test` 人機交互介面時, 才需要啓動運行 `testWeb` 伺服器, 定型之後生產階段則不再需要; 若不需要測試框架基礎功能, 可將文件夾 `testWeb` 刪除, 不會影響 電子表格 Microsoft Excel VBA 驅動瀏覽器 Microsoft Edge 宏應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 的功能.
 
    伺服器 testWeb 運行需要 Node.js 環境, 所以運行之前, 需對作業系統 ( Operating System ) 安裝配置 Node.js 環境成功方可.
 
