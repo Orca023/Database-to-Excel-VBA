@@ -89,41 +89,63 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
    2).     單擊電子表格 Excel 「 `加載項 ( add-in )` 」菜單 ( Menu ) 下 Microsoft Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 標簽, 首先執行的是調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ).
 
-   3). 調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ), 並讀取操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 裏的自定義配置參數值. 其中, 鏈接操控資料庫 Microsoft Access 的子過程 ( Sub ) 脚本代碼, 也存放在該操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏.
+   3). 調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 導入加載調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ), 並讀取操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 裏的自定義配置參數值. 其中, 鏈接操控資料庫 Microsoft Access 的子過程 ( Sub ) 脚本代碼, 也存放在該操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏.
 
-   同時，調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ), 用於鏈接操控 MongoDB 資料庫.
+   同時，調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 導入加載調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ), 用於鏈接操控 MongoDB 資料庫.
 
-   同時，調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ), 用於鏈接操控 MariaDB 資料庫.
+   同時，調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 導入加載調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ), 用於鏈接操控 MariaDB 資料庫.
 
-   4). 同時, 調度模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerDispatchModule.bas` ) 調用窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ), 並根據操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 裏的自定義配置參數值, 爲窗體 ( Form ) 介面 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 賦初值, 窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 是人機交互介面.
+   4). 同時, 調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 調用窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ), 並根據操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的自定義配置參數值, 爲窗體 ( Form ) 介面 ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 賦初值, 窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 是人機交互介面.
 
-   5). 手動操控窗體 ( Form ) 介面使用瀏覽器 Microsoft Edge 打開待讀取資訊的目標網站頁面 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/testWeb/` ).
+   5). 手動操控窗體 ( Form ) 介面, 自定義點選參數，啓動運行.
 
-   6). 首先, 窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 調用操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ).
+   6). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 讀取, 操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏自定義點選輸入的參數值.
 
-   7). 然後, 操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ).
+   7). 操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 調用, 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run 子過程, 執行鏈接操控資料庫 ( Microsoft Access , MongoDB , MariaDB , etc ) 實現新增、刪除、修改、查找資料等操作.
 
-   8). 最後, 第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) 會驅動瀏覽器 Microsoft Edge 加載打開目標網站頁面 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/testWeb/` ).
+   8). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run 子過程, 根據操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏自定義點選輸入的參數值, 選擇執行如下 :
 
-   9). 手動操控窗體 ( Form ) 介面, 啓動循環操控瀏覽器 Microsoft Edge 並讀取載入的目標網站頁面 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/testWeb/` ) 裏顯示的資訊.
+   8.1). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run_Access 子過程, 其中包括如下動作 :
 
-   3). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 調用此模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run_Access 子過程, 執行鏈接操控資料庫 Microsoft Access 的脚本代碼.
+   從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 Microsoft Access 的資訊.
 
-   3). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 裏的 Sub Run_MongoDB 子過程, 執行鏈接操控資料庫 MongoDB 的脚本代碼.
+   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 Microsoft Access 軟體識別處理, 從而達到寫入資料庫 Microsoft Access 目的.
 
-   3). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 裏的 Sub Run_MariaDB 子過程, 執行鏈接操控資料庫 MariaDB 的脚本代碼.
+   執行鏈接操控資料庫 ( Microsoft Access ) 實現新增、刪除、修改、查找資料等操作.
 
-   10). 首先, 窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 調用操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ).
+   讀取從資料庫 Microsoft Access 返回的資訊.
 
-   11). 然後, 操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ).
+   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 Microsoft Access 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
 
-   12). 然後, 第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) 會驅動瀏覽器 Microsoft Edge 翻頁, 並讀取載入的目標網站頁面 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/testWeb/` ) 顯示的資訊.
+   將從資料庫 Microsoft Access 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
-   13). 然後, 操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 將讀取到的資訊, 回饋至窗體 ( Form ) 介面 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 動態提示運行狀態.
+   8.2). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 裏的 Sub Run_MongoDB 子過程, 其中包括如下動作 :
 
-   14). 同時, 操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 讀取窗體 ( Form ) 介面 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 裏自定義的保存位置參數值.
+   從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 MongoDB 的資訊.
 
-   15). 最後, 操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 根據自定義的保存位置參數值, 將讀取到的資訊, 寫入電子表格 Excel 指定的位置存儲.
+   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MongoDB 軟體識別處理, 從而達到寫入資料庫 MongoDB 目的.
+
+   執行鏈接操控資料庫 ( MongoDB ) 實現新增、刪除、修改、查找資料等操作.
+
+   讀取從資料庫 MongoDB 返回的資訊.
+
+   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MongoDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
+
+   將從資料庫 MongoDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
+
+   8.3). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 裏的 Sub Run_MariaDB 子過程, 其中包括如下動作 :
+
+   從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 MariaDB 的資訊.
+
+   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MariaDB 軟體識別處理, 從而達到寫入資料庫 MariaDB 目的.
+
+   執行鏈接操控資料庫 ( MariaDB ) 實現新增、刪除、修改、查找資料等操作.
+
+   讀取從資料庫 MariaDB 返回的資訊.
+
+   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MariaDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
+
+   將從資料庫 MariaDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
 3. 項目將自定義的操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 作爲獨立的一個模組 ( Module ) 設計, 目的是, 與調度模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerDispatchModule.bas` ) 分開, 解耦合, 這樣便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
 
