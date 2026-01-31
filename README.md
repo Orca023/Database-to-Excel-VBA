@@ -90,7 +90,9 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
    2).     單擊電子表格 Excel 「 `加載項 ( add-in )` 」菜單 ( Menu ) 下 Microsoft Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 標簽, 首先執行的是調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ).
 
    3). 調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ), 並讀取操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 裏的自定義配置參數值. 其中, 鏈接操控資料庫 Microsoft Access 的子過程 ( Sub ) 脚本代碼, 也存放在該操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏.
+
    同時，調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ), 用於鏈接操控 MongoDB 資料庫.
+
    同時，調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ), 用於鏈接操控 MariaDB 資料庫.
 
    4). 同時, 調度模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerDispatchModule.bas` ) 調用窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ), 並根據操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 裏的自定義配置參數值, 爲窗體 ( Form ) 介面 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 賦初值, 窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 是人機交互介面.
