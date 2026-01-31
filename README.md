@@ -207,21 +207,27 @@ Application :
 
 Microsoft Office Excel Professional 2019 x86_64
 
-Browser :
-
-Microsoft Internet Explorer ( Trident ) x86_64 version 11
-
-Microsoft Edge ( Chromium - Blink ) x86_64 version 126.0.2592.102
-
-Google Chrome ( Chromium - Blink ) x86_64 version 126.0.6478.127
-
-Mozilla Firefox ( Gecko ) x86_64 version 128.0 2024/07/09
-
 Interpreter :
 
 Node.js - version 22.20.0
 
 npm - version 10.7.0
+
+Database :
+
+MongoDB mongod - version 8.2.3
+
+MongoDB mongosh - version 2.6.0
+
+Interpreter :
+
+Python - version 3.11.2
+
+pip - version 22.3.1
+
+Database :
+
+MariaDB - version 10.11
 
 ---
 
@@ -327,6 +333,20 @@ https://github.com/nodejs
 
 [程式設計 JavaScript 語言解釋器 ( Interpreter ) 之 Node.js 官方 GitHub 網站倉庫](https://github.com/nodejs/node): 
 https://github.com/nodejs/node.git
+
+Interpreter : python
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方網站](https://www.python.org/): 
+https://www.python.org/
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方下載頁](https://www.python.org/downloads/): 
+https://www.python.org/downloads/
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/python): 
+https://github.com/python
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫頁](https://github.com/python/cpython): 
+https://github.com/python/cpython.git
 
 ---
 
