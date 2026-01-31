@@ -99,23 +99,23 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
    5). 手動操控窗體 ( Form ) 介面, 自定義點選參數，啓動運行.
 
-   6). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 讀取, 操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏自定義點選輸入的參數值.
+   6). 操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 調用, 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run 子過程, 啓動鏈接操控資料庫 ( Microsoft Access , MongoDB , MariaDB , etc ) 實現新增、刪除、修改、查找資料等操作.
 
-   7). 操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 調用, 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run 子過程, 執行鏈接操控資料庫 ( Microsoft Access , MongoDB , MariaDB , etc ) 實現新增、刪除、修改、查找資料等操作.
+   7). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run 子過程, 讀取操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏自定義點選輸入的參數值.
 
-   8). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run 子過程, 根據操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏自定義點選輸入的參數值, 選擇執行如下 :
+   8). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run 子過程, 根據操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏自定義點選輸入的參數值, 選擇執行如下後續動作 :
 
    8.1). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run_Access 子過程, 其中包括如下動作 :
 
    從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 Microsoft Access 的資訊.
 
-   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 Microsoft Access 軟體識別處理, 從而達到寫入資料庫 Microsoft Access 目的.
+   引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 Microsoft Access 軟體識別處理, 從而達到寫入資料庫 Microsoft Access 目的.
 
    執行鏈接操控資料庫 ( Microsoft Access ) 實現新增、刪除、修改、查找資料等操作.
 
    讀取從資料庫 Microsoft Access 返回的資訊.
 
-   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 Microsoft Access 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
+   引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 Microsoft Access 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
 
    將從資料庫 Microsoft Access 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
@@ -123,13 +123,13 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
    從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 MongoDB 的資訊.
 
-   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MongoDB 軟體識別處理, 從而達到寫入資料庫 MongoDB 目的.
+   引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MongoDB 軟體識別處理, 從而達到寫入資料庫 MongoDB 目的.
 
    執行鏈接操控資料庫 ( MongoDB ) 實現新增、刪除、修改、查找資料等操作.
 
    讀取從資料庫 MongoDB 返回的資訊.
 
-   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MongoDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
+   引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MongoDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
 
    將從資料庫 MongoDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
@@ -137,27 +137,27 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
    從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 MariaDB 的資訊.
 
-   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MariaDB 軟體識別處理, 從而達到寫入資料庫 MariaDB 目的.
+   引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MariaDB 軟體識別處理, 從而達到寫入資料庫 MariaDB 目的.
 
    執行鏈接操控資料庫 ( MariaDB ) 實現新增、刪除、修改、查找資料等操作.
 
    讀取從資料庫 MariaDB 返回的資訊.
 
-   引用第三方類模組 ( Class Modul ) : ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsBrowser.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsCore.cls` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MariaDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
+   引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MariaDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
 
    將從資料庫 MariaDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
-3. 項目將自定義的操作模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 作爲獨立的一個模組 ( Module ) 設計, 目的是, 與調度模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerDispatchModule.bas` ) 分開, 解耦合, 這樣便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
+2. 項目將自定義的操作模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 作爲獨立的一個模組 ( Module ) 設計, 目的是, 與調度模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerDispatchModule.bas` ) 分開, 解耦合, 這樣便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
 
-   同樣的, 項目將調度模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerDispatchModule.bas` ) 作爲獨立的一個模組 ( Module ) 設計, 與窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 分開, 其目的也是爲了, 解耦合, 便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
+   同樣的, 項目將調度模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerDispatchModule.bas` ) 作爲獨立的一個模組 ( Module ) 設計, 與窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/CrawlerControlPanel.frx` ) , ( `./Database-to-Excel-VBA/CrawlerControlPanel.frm` ) 分開, 其目的也是爲了, 解耦合, 便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
 
-   若不考慮日後的功能擴展, 可取消獨立的調度模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerDispatchModule.bas` ) 設計, 將之全部功能, 整合入窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 裏, 這樣可降低項目架構的複雜性, 更易於理解.
+   若不考慮日後的功能擴展, 可取消獨立的調度模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerDispatchModule.bas` ) 設計, 將之全部功能, 整合入窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/CrawlerControlPanel.frx` ) , ( `./Database-to-Excel-VBA/CrawlerControlPanel.frm` ) 裏, 這樣可降低項目架構的複雜性, 更易於理解.
 
-4. 若想擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面, 可新增複製 `test/` 文件夾並重新命名, 保存路徑位於 `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/` 文件夾裏, 重新命名並自定義修改文件夾 `test/` 裏的模組 ( Module ) : `testCrawlerModule.bas` , 根據需要自定義修改設計編寫代碼脚本即可, 這一操作的目的, 是爲實現新增一組操作介面的效果, 例如像 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
+4. 若想擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面, 可新增複製 `test/` 文件夾並重新命名, 保存路徑位於 `./Database-to-Excel-VBA/CrawlerStrategyServer/` 文件夾裏, 重新命名並自定義修改文件夾 `test/` 裏的模組 ( Module ) : `testCrawlerModule.bas` , 根據需要自定義修改設計編寫代碼脚本即可, 這一操作的目的, 是爲實現新增一組操作介面的效果, 例如像 ( `./Database-to-Excel-VBA/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
 
-   并且, 需要修改調度模組 ( Module ) ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerDispatchModule.bas` ) 裏的代碼, 使其可以正確找到調用自定義擴展新增的操作模組 ( Module ) 並正確的讀取適配合規的自定義擴展新增的配置參數初值, 例如像 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
+   并且, 需要修改調度模組 ( Module ) ( `./Database-to-Excel-VBA/CrawlerDispatchModule.bas` ) 裏的代碼, 使其可以正確找到調用自定義擴展新增的操作模組 ( Module ) 並正確的讀取適配合規的自定義擴展新增的配置參數初值, 例如像 ( `./Database-to-Excel-VBA/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
 
-   并且, 需要修改窗體 ( Form ) 對象 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frx` ) , ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerControlPanel.frm` ) 裏的代碼, 使其可以正確適配合規的顯示自定義擴展新增的模組 ( Module )的配置參數值, 作爲人機交互介面, 可以正確的操控自定義擴展新增的模組 ( Module ) 引用第三方類模組 ( Class Modul ) : `clsBrowser.cls` , `clsCore.cls` , `clsJsConverter.cls` 驅動 Microsoft Edge 瀏覽器, 例如像 ( `./focused-crawling-Microsoft-Office-Excel-VBA-Edge/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
+   并且, 需要修改窗體 ( Form ) 對象 ( `./Database-to-Excel-VBA/CrawlerControlPanel.frx` ) , ( `./Database-to-Excel-VBA/CrawlerControlPanel.frm` ) 裏的代碼, 使其可以正確適配合規的顯示自定義擴展新增的模組 ( Module )的配置參數值, 作爲人機交互介面, 可以正確的操控自定義擴展新增的模組 ( Module ) 引用第三方類模組 ( Class Modul ) : `clsBrowser.cls` , `clsCore.cls` , `clsJsConverter.cls` 驅動 Microsoft Edge 瀏覽器, 例如像 ( `./Database-to-Excel-VBA/CrawlerStrategyServer/test/testCrawlerModule.bas` ) 類似的.
 
 5. 項目空間裏的文件夾 `testWeb` 祇是一組用於配合測試電子表格 Microsoft Excel VBA 驅動瀏覽器 Microsoft Edge 宏應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 框架基礎功能的網站頁面, 主要用於開發階段的測試之用, 當 `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 的策略介面選擇 `test` 選項加載顯示 `test` 人機交互介面時, 才需要啓動運行 `testWeb` 伺服器, 定型之後生產階段則不再需要; 若不需要測試框架基礎功能, 可將文件夾 `testWeb` 刪除, 不會影響 電子表格 Microsoft Excel VBA 驅動瀏覽器 Microsoft Edge 宏應用 : `focused-crawling-Microsoft-Office-Excel-VBA-Edge` 的功能.
 
