@@ -262,10 +262,14 @@ Database : Microsoft Access
 
 [資料庫 Microsoft Access 應用軟體官方網站](https://www.microsoft.com/en-us/microsoft-365/access): 
 https://www.microsoft.com/en-us/microsoft-365/access
+
+[資料庫 Microsoft Access 應用軟體官方網站中文版](https://www.microsoft.com/zh-tw/microsoft-365/access): 
 https://www.microsoft.com/zh-tw/microsoft-365/access
 
 [資料庫 Microsoft Access 應用軟體官方手冊](https://learn.microsoft.com/en-us/office/vba/api/overview/access): 
 https://learn.microsoft.com/en-us/office/vba/api/overview/access
+
+[資料庫 Microsoft Access 應用軟體官方手冊中文版](https://learn.microsoft.com/zh-tw/office/vba/api/overview/access): 
 https://learn.microsoft.com/zh-tw/office/vba/api/overview/access
 
 Database : MongoDB
