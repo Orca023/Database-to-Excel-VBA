@@ -105,47 +105,47 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
    8). 操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run 子過程, 根據操控介面窗體 ( Form ) ( `./Database-to-Excel-VBA/DatabaseControlPanel.frx` ) , ( `./Database-to-Excel-VBA/DatabaseControlPanel.frm` ) 裏自定義點選輸入的參數值, 選擇執行如下後續動作 :
 
-   8.1). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run_Access 子過程, 其中包括如下動作 :
+      8.1). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏的 Sub Run_Access 子過程, 其中包括如下動作 :
 
-   8.1.1). 從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 Microsoft Access 的資訊.
+         8.1.1). 從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 Microsoft Access 的資訊.
 
-   8.1.2). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 Microsoft Access 軟體識別處理, 從而達到寫入資料庫 Microsoft Access 目的.
+         8.1.2). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 Microsoft Access 軟體識別處理, 從而達到寫入資料庫 Microsoft Access 目的.
 
-   8.1.3). 執行鏈接操控資料庫 ( Microsoft Access ) 實現新增、刪除、修改、查找資料等操作.
+         8.1.3). 執行鏈接操控資料庫 ( Microsoft Access ) 實現新增、刪除、修改、查找資料等操作.
 
-   8.1.4). 讀取從資料庫 Microsoft Access 返回的資訊.
+         8.1.4). 讀取從資料庫 Microsoft Access 返回的資訊.
 
-   8.1.5). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 Microsoft Access 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
+         8.1.5). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 Microsoft Access 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
 
-   8.1.6). 將從資料庫 Microsoft Access 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
+         8.1.6). 將從資料庫 Microsoft Access 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
-   8.2). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 裏的 Sub Run_MongoDB 子過程, 其中包括如下動作 :
+      8.2). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 裏的 Sub Run_MongoDB 子過程, 其中包括如下動作 :
 
-   8.2.1). 從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 MongoDB 的資訊.
+         8.2.1). 從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 MongoDB 的資訊.
 
-   8.2.2). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MongoDB 軟體識別處理, 從而達到寫入資料庫 MongoDB 目的.
+         8.2.2). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MongoDB 軟體識別處理, 從而達到寫入資料庫 MongoDB 目的.
 
-   8.2.3). 執行鏈接操控資料庫 ( MongoDB ) 實現新增、刪除、修改、查找資料等操作.
+         8.2.3). 執行鏈接操控資料庫 ( MongoDB ) 實現新增、刪除、修改、查找資料等操作.
 
-   8.2.4). 讀取從資料庫 MongoDB 返回的資訊.
+         8.2.4). 讀取從資料庫 MongoDB 返回的資訊.
 
-   8.2.5). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MongoDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
+         8.2.5). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MongoDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
 
-   8.2.6). 將從資料庫 MongoDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
+         8.2.6). 將從資料庫 MongoDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
-   8.3). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 裏的 Sub Run_MariaDB 子過程, 其中包括如下動作 :
+      8.3). 調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 裏的 Sub Run_MariaDB 子過程, 其中包括如下動作 :
 
-   8.3.1). 從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 MariaDB 的資訊.
+         8.3.1). 從自定義傳入的電子表格 Excel 指定位置, 讀取待上傳或操控資料庫 MariaDB 的資訊.
 
-   8.3.2). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MariaDB 軟體識別處理, 從而達到寫入資料庫 MariaDB 目的.
+         8.3.2). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換待上傳的資訊格式 ( 例如, 將二維數組 ( Array 2 Dimension ) 類型的數據轉換爲 JSON 字符串類型的數據 ) , 使之可以被資料庫 MariaDB 軟體識別處理, 從而達到寫入資料庫 MariaDB 目的.
 
-   8.3.3). 執行鏈接操控資料庫 ( MariaDB ) 實現新增、刪除、修改、查找資料等操作.
+         8.3.3). 執行鏈接操控資料庫 ( MariaDB ) 實現新增、刪除、修改、查找資料等操作.
 
-   8.3.4). 讀取從資料庫 MariaDB 返回的資訊.
+         8.3.4). 讀取從資料庫 MariaDB 返回的資訊.
 
-   8.3.5). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MariaDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
+         8.3.5). 引用第三方類模組 ( Class Modul ) : ( `./Database-to-Excel-VBA/CDPimport/clsBrowser.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsCore.cls` ) , ( `./Database-to-Excel-VBA/CDPimport/clsJsConverter.cls` ) , 轉換從資料庫 MariaDB 返回的資訊格式 ( 例如, 將 JSON 字符串類型的數據轉換爲二維數組 ( Array 2 Dimension ) 類型的數據 ) , 使之可以被電子表格 Excel 軟體識別, 從而實現寫入電子表格 Excel 目的.
 
-   8.3.6). 將從資料庫 MariaDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
+         8.3.6). 將從資料庫 MariaDB 返回的資訊, 寫入自定義傳入的電子表格 Excel 指定位置.
 
 2. 項目將自定義的操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) ( `./Database-to-Excel-VBA/DatabaseMariaDB.bas` ) 分別作爲獨立的一個模組 ( Module ) 設計, 目的是, 與調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 分開, 解耦合, 這樣便於日後維護擴展功能, 增加更多元的操控介面, 使之可選擇的, 適用於讀取更多目標網站頁面裏顯示的資訊.
 
@@ -308,9 +308,8 @@ Database : MongoDB
 [資料庫 MongoDB 應用軟體官方網站](https://www.mongodb.com/): 
 https://www.mongodb.com/
 
-[資料庫 MongoDB 應用軟體官方手冊](https://www.mongodb.com/docs/): 
-https://www.mongodb.com/docs/
-https://www.mongodb.com/docs/manual/installation/
+[資料庫 MongoDB 應用軟體官方手冊](https://www.mongodb.com/docs/manual/): 
+https://www.mongodb.com/docs/manual/
 
 [資料庫 MongoDB 應用軟體下載官方網站](https://www.mongodb.com/try/download/community): 
 https://www.mongodb.com/try/download/community
@@ -326,8 +325,8 @@ Database : MariaDB
 [資料庫 MariaDB 應用軟體官方網站](https://mariadb.com/): 
 https://mariadb.com/
 
-[資料庫 MariaDB 應用軟體官方手冊](https://mariadb.com/docs/): 
-https://mariadb.com/docs/
+[資料庫 MariaDB 應用軟體官方手冊](https://mariadb.com/docs/server): 
+https://mariadb.com/docs/server
 
 [資料庫 MariaDB 應用軟體下載官方網站](https://mariadb.org/download/): 
 https://mariadb.org/download/
