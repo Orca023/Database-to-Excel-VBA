@@ -258,26 +258,35 @@ https://github.com/longvh211/Chromium-Automation-with-CDP-for-VBA.git
 [第三方擴展類模組 Edge-IE-Mode-Automation-with-IES-for-VBA 官方 GitHub 網站倉庫](https://github.com/longvh211/Edge-IE-Mode-Automation-with-IES-for-VBA): 
 https://github.com/longvh211/Edge-IE-Mode-Automation-with-IES-for-VBA.git
 
-Browser : Microsoft Internet Explorer ( Trident )
+Database : Microsoft Access
 
-[瀏覽器 ( Browser ) 之 Microsoft Internet Explorer 下載官方網站](https://www.microsoft.com/en-za/download/internet-explorer.aspx): 
-https://www.microsoft.com/en-za/download/internet-explorer.aspx
+[資料庫 Microsoft Access 應用軟體官方網站](https://www.microsoft.com/en-us/microsoft-365/access): 
+https://www.microsoft.com/en-us/microsoft-365/access
+https://www.microsoft.com/zh-tw/microsoft-365/access
 
-Browser : Microsoft Edge ( Chromium - Blink )
+[資料庫 Microsoft Access 應用軟體官方手冊](https://learn.microsoft.com/en-us/office/vba/api/overview/access): 
+https://learn.microsoft.com/en-us/office/vba/api/overview/access
+https://learn.microsoft.com/zh-tw/office/vba/api/overview/access
 
-[瀏覽器 ( Browser ) 之 Microsoft Edge 官方 GitHub 網站賬戶](https://github.com/MicrosoftEdge/): 
-https://github.com/MicrosoftEdge/
+Database : MongoDB
 
-[瀏覽器 ( Browser ) 之 Microsoft Edge 官方手冊 GitHub 網站倉庫](https://github.com/MicrosoftEdge/MSEdgeExplainers): 
-https://github.com/MicrosoftEdge/MSEdgeExplainers.git
+[資料庫 MongoDB 應用軟體官方網站](https://www.mongodb.com/): 
+https://www.mongodb.com/
 
-[瀏覽器 ( Browser ) 之 Microsoft Edge 下載官方網站](https://www.microsoft.com/zh-tw/edge/download?form=MA13FJ): 
-https://www.microsoft.com/zh-tw/edge/download?form=MA13FJ
+[資料庫 MongoDB 應用軟體官方手冊](https://www.mongodb.com/docs/): 
+https://www.mongodb.com/docs/
+https://www.mongodb.com/docs/manual/installation/
 
-[瀏覽器 ( Browser ) 之 Microsoft Edge 驅動 ( Driver ) 下載官方網站](https://developer.microsoft.com/zh-tw/microsoft-edge/tools/webdriver/?form=MA13LH): 
-https://developer.microsoft.com/zh-tw/microsoft-edge/tools/webdriver/?form=MA13LH
+[資料庫 MongoDB 應用軟體下載官方網站](https://www.mongodb.com/try/download/community): 
+https://www.mongodb.com/try/download/community
 
-Browser : Google Chrome ( Chromium - Blink )
+[資料庫 MongoDB 應用軟體官方 GitHub 網站賬戶](https://github.com/mongodb): 
+https://github.com/mongodb
+
+[資料庫 MongoDB 應用軟體官方 GitHub 網站倉庫](https://github.com/mongodb/mongo): 
+https://github.com/mongodb/mongo.git
+
+Database : MariaDB
 
 [瀏覽器 ( Browser ) 之 Google Chrome 官方 GitHub 網站賬戶](https://github.com/GoogleChrome): 
 https://github.com/GoogleChrome
