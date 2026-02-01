@@ -87,7 +87,7 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
    1). 啓動 Microsoft Office Excel Professional 2019 應用, 電子表格 Excel 應用會自動運行已載入的模組 ( Module ) 和類模組 ( Class Modul ), 其中載入的調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 裏的自定義過程 ( Subroutine ) : `MenuSetup()` 會修改電子表格 Excel 的菜單欄 ( Menu Bar ) 向「 `加載項 ( add-in )` 」菜單下寫入自定義的 Microsoft Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 標簽.
 
-   2).     單擊電子表格 Excel 「 `加載項 ( add-in )` 」菜單 ( Menu ) 下 Microsoft Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 標簽, 首先執行的是調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ).
+   2). 單擊電子表格 Excel 「 `加載項 ( add-in )` 」菜單 ( Menu ) 下 Microsoft Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 標簽, 首先執行的是調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ).
 
    3). 調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 導入加載調用操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ), 並讀取操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseMongoDB.bas` ) 裏的自定義配置參數值. 其中, 鏈接操控資料庫 Microsoft Access 的子過程 ( Sub ) 脚本代碼, 也存放在該操作模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseModule.bas` ) 裏.
 
@@ -175,6 +175,12 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
    root@localhost:~# /bin/node ./Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
 ```
 
+   另,
+
+   項目調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 裏的自定義子過程 : `Sub runMongoDBServerSideApplication()` 是微軟電子表格 Microsoft Excel VBA 調用視窗 ( Windows ) 系統裏的 `WScript.Shell` 對象 ( Object ) 裏的 `.Exec` 方法創建子進程 ( child Process ) 並再調用視窗 ( Windows ) 系統裏的 shell 語句控制臺命令行 ( cmd.exe ) 執行 Bash 語句運行資料庫 MongoDB 伺服器 ( Server ) 端應用的二進位可執行檔 ( .exe ) 從而實現, 單擊 ( Click ) 微軟電子表格 Microsoft Excel 應用軟體的菜單欄 ( Menu bar ) 裏自定義的子菜單，即可一鍵快捷啓動資料庫 MongoDB 伺服器 ( Server ) 端應用的效果.
+
+   項目調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 裏的自定義子過程 : `Sub runMongoDBhttpServer()` 是微軟電子表格 Microsoft Excel VBA 調用視窗 ( Windows ) 系統裏的 `WScript.Shell` 對象 ( Object ) 裏的 `.Exec` 方法創建子進程 ( child Process ) 並再調用視窗 ( Windows ) 系統裏的 shell 語句控制臺命令行 ( cmd.exe ) 執行 Bash 語句運行程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 的二進位可執行檔 ( .exe ) 加載自定義創建的 http 伺服器 ( Server ) 應用脚本代碼檔 ( .js ) 從而實現, 單擊 ( Click ) 微軟電子表格 Microsoft Excel 應用軟體的菜單欄 ( Menu bar ) 裏自定義的子菜單, 即可一鍵快捷啓動使用計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 自定義創建的 http 伺服器 ( Server ) 應用的效果.
+
 5. 項目空間裏的文件夾 `MariaDB` 是一組使用計算機程式設計語言 ( Python ) 自定義創建的 http 伺服器 ( Server ) 應用, 電子表格 Microsoft Excel VBA 直接訪問此程式設計語言 ( Python ) 的 http 伺服器 ( Server ) 應用並向其發送指令, 然後, 此程式設計語言 ( Python ) 的 http 伺服器 ( Server ) 應用, 再鏈接驅動資料庫 MariaDB 伺服器端軟體, 實現操控資料庫 ( MariaDB ) 新增、刪除、修改、查找資料等操作, 這樣設計目的是, 起到隔離電子表格 Microsoft Excel VBA 直連訪問資料庫 MariaDB 伺服器 ( Server ) 的作用.
 
    使用計算機程式設計語言 ( Python ) 自定義創建的 http 伺服器 ( Server ) 應用, 運行需要 Python 環境, 所以運行之前, 需對作業系統 ( Operating System ) 安裝配置 Python 環境成功方可.
@@ -192,6 +198,12 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 ```
    root@localhost:~# /bin/python3 ./Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
 ```
+
+   另,
+
+   項目調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 裏的自定義子過程 : `Sub runMariaDBServerSideApplication()` 是微軟電子表格 Microsoft Excel VBA 調用視窗 ( Windows ) 系統裏的 `WScript.Shell` 對象 ( Object ) 裏的 `.Exec` 方法創建子進程 ( child Process ) 並再調用視窗 ( Windows ) 系統裏的 shell 語句控制臺命令行 ( cmd.exe ) 執行 Bash 語句運行資料庫 MariaDB 伺服器 ( Server ) 端應用的二進位可執行檔 ( .exe ) 從而實現, 單擊 ( Click ) 微軟電子表格 Microsoft Excel 應用軟體的菜單欄 ( Menu bar ) 裏自定義的子菜單，即可一鍵快捷啓動資料庫 MariaDB 伺服器 ( Server ) 端應用的效果.
+
+   項目調度模組 ( Module ) ( `./Database-to-Excel-VBA/DatabaseDispatchModule.bas` ) 裏的自定義子過程 : `Sub runMariaDBhttpServer()` 是微軟電子表格 Microsoft Excel VBA 調用視窗 ( Windows ) 系統裏的 `WScript.Shell` 對象 ( Object ) 裏的 `.Exec` 方法創建子進程 ( child Process ) 並再調用視窗 ( Windows ) 系統裏的 shell 語句控制臺命令行 ( cmd.exe ) 執行 Bash 語句運行程式設計語言 ( Python ) 解釋器 ( Interpreter ) 的二進位可執行檔 ( .exe ) 加載自定義創建的 http 伺服器 ( Server ) 應用脚本代碼檔 ( .py ) 從而實現, 單擊 ( Click ) 微軟電子表格 Microsoft Excel 應用軟體的菜單欄 ( Menu bar ) 裏自定義的子菜單, 即可一鍵快捷啓動使用計算機程式設計語言 ( Python ) 自定義創建的 http 伺服器 ( Server ) 應用的效果.
 
 ![]()
 
