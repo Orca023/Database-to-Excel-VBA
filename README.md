@@ -165,9 +165,9 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/pyth
 
 4. 項目空間裏的文件夾 `MongoDB` 是一組使用計算機程式設計語言 ( JavaScript ) 解釋器 ( Node.js ) 自定義創建的 http 伺服器 ( Server ) 應用, 電子表格 Microsoft Excel VBA 直接訪問此程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 的 http 伺服器 ( Server ) 應用並向其發送指令, 然後, 此程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 的 http 伺服器 ( Server ) 應用, 再鏈接驅動資料庫 MongoDB 伺服器端軟體, 實現操控資料庫 ( MongoDB ) 新增、刪除、修改、查找資料等操作, 這樣設計目的是, 起到隔離電子表格 Microsoft Excel VBA 直連訪問資料庫 MongoDB 伺服器 ( Server ) 的作用.
 
-   使用計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 自定義創建的 http 伺服器 ( Server ) 應用, 運行需要 Interpreter : Node.js 解釋器環境, 所以運行之前, 需對作業系統 ( Operating System ) 安裝配置 Interpreter : Node.js 解釋器環境成功方可.
+   使用計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 自定義創建的 http 伺服器 ( Server ) 應用, 運行需要 Node.js 解釋器 ( Interpreter ) 環境, 所以運行之前, 需對作業系統 ( Operating System ) 安裝配置 Node.js 解釋器 ( Interpreter ) 環境成功方可.
 
-   可在 Linux-Ubuntu 系統的控制臺命令列人機交互介面窗口 ( Ubuntu-bash ) 使用如下指令, 安裝配置 Interpreter : Node.js 解釋器環境 :
+   可在 Linux-Ubuntu 系統的控制臺命令列人機交互介面窗口 ( Ubuntu-bash ) 使用如下指令, 安裝配置 Node.js 解釋器 ( Interpreter ) 環境 :
    ```
    root@localhost:~# sudo apt install nodejs
    root@localhost:~# sudo apt install npm
