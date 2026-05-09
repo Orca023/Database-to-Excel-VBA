@@ -19,3 +19,8 @@ MariaDB [Database1]> SHOW COLUMNS FROM Collection1;
 MariaDB [Database1]> exit
 
 二、或下載開箱即用 ( out of the box ) ( portable application ) 已配置壓縮檔「data-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip」解壓縮，將其保存至檔案夾 ( folder ) :「Database-to-Excel-VBA/MariaDB/data/」内自行安裝配置至該路徑即可.
+
+三、啓動 MariaDB 資料庫伺服器時，需讀入自定義的啓動參數，在自定義指定的配置文檔「configuring_mariadb_with_option_files.ini」裏，需要修改條目參數爲如下值：
+datadir=C:/Database-to-Excel-VBA/MariaDB/data/
+tmpdir=C:/Database-to-Excel-VBA/MariaDB/tmp/
+basedir=C:/Database-to-Excel-VBA/MariaDB/
