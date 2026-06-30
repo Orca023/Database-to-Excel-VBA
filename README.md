@@ -398,4 +398,5 @@ C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/MariaDB/MariaDB10.11/
 9. 壓縮檔 : `data-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`
 
 壓縮檔「`data-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MariaDB 伺服器端自定義創建的名爲 'Database1' 資料庫 ( Database ) , 内含名爲 'Collection1' 自定義數據集 ( Collection/Table ) , 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MariaDB/data/` 内，可使用資料庫 MariaDB 用戶端應用鏈接伺服器之後，操作處理增、刪、改、查資料集合.
+
 即可.
