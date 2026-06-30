@@ -57,6 +57,14 @@ C:\Database-to-Excel-VBA\MariaDB\MariaDB10.11\bin\mariadbd.exe --defaults-extra-
 ```
 root@localhost:~# /etc/init.d/mariadb start --defaults-extra-file=/etc/mysql/my.cnf
 ```
+使用如下指令查看正在後臺運行的 MariaDB 資料庫伺服端應用 ( Server ) 伺服器的運行狀態 :
+```
+root@localhost:~# /etc/init.d/mariadb status
+```
+使用如下指令關閉正在後臺運行的 MariaDB 資料庫伺服端應用 ( Server ) 伺服器 :
+```
+root@localhost:~# /etc/init.d/mariadb stop
+```
 
 十二. 啓動自定義的操作 MariaDB 資料庫的 Node.js 伺服器 :
 ```
