@@ -74,7 +74,7 @@ C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA
 ```
 root@localhost:/home/TermuxUbuntu/MariaDB# /usr/bin/node /home/TermuxUbuntu/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
 ```
-鍵盤同時按住「Ctrl」+「c」鍵輸入，即可關閉正在運輸的伺服器.
+鍵盤同時按住「Ctrl」+「c」鍵輸入，即可關閉正在運行的自定義的操作 MariaDB 資料庫的 Node.js 伺服器.
 
 十三. 運行 Microsoft Office Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 選擇 `operation panel` 選項, 從 Microsoft Excel 應用的「`加載項 ( add-in )`」菜單裏, 選擇 : 「 `Manipulate database` 」 → 「 `operation panel` 」, 加載顯示 `operation panel` 人機交互介面.
 
