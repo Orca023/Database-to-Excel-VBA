@@ -177,9 +177,13 @@ root@localhost:/home/TermuxUbuntu/MariaDB# /usr/bin/node /home/TermuxUbuntu/Mari
    root@localhost:~# sudo apt install nodejs
    root@localhost:~# sudo apt install npm
    ```
-   可在 Linux-Ubuntu 系統的控制臺命令列人機交互介面窗口 ( Ubuntu-bash ) 使用如下指令, 啓動運行此計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 創建的 http 伺服器 ( Server ) 應用 :
+   若自定義編制的操作 MongoDB 資料庫的 Node.js 伺服器工程，保存在「/home/TermuxUbuntu/MongoDB/」路徑，可在 Linux-Ubuntu 系統的控制臺命令列人機交互介面窗口 ( Ubuntu-bash ) 使用如下指令, 啓動運行此計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 創建的 http 伺服器 ( Server ) 應用 :
    ```
-   root@localhost:~# /bin/node ./Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+   root@localhost:/home/TermuxUbuntu/MongoDB# /usr/bin/node /home/TermuxUbuntu/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+   ```
+   若爲 Windows 作業系統，可在 Windows 作業系統的 CMD 控制臺命令列人機交互介面窗口 ( Windows-cmd ) 使用如下指令, 啓動運行此計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 創建的 http 伺服器 ( Server ) 應用 :
+   ```
+   C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
    ```
 
    另,
@@ -190,20 +194,20 @@ root@localhost:/home/TermuxUbuntu/MariaDB# /usr/bin/node /home/TermuxUbuntu/Mari
 
 5. 項目空間裏的文件夾 `MariaDB` 是一組使用計算機程式設計語言 ( Python ) 自定義創建的 http 伺服器 ( Server ) 應用, 電子表格 Microsoft Excel VBA 直接訪問此程式設計語言 ( Python ) 的 http 伺服器 ( Server ) 應用並向其發送指令, 然後, 此程式設計語言 ( Python ) 的 http 伺服器 ( Server ) 應用, 再鏈接驅動資料庫 MariaDB 伺服器端軟體, 實現操控資料庫 ( MariaDB ) 新增、刪除、修改、查找資料等操作, 這樣設計目的是, 起到隔離電子表格 Microsoft Excel VBA 直連訪問資料庫 MariaDB 伺服器 ( Server ) 的作用.
 
-   使用計算機程式設計語言 ( Python ) 自定義創建的 http 伺服器 ( Server ) 應用, 運行需要 Python 解釋器 ( Interpreter ) 環境, 所以運行之前, 需對作業系統 ( Operating System ) 安裝配置 Python 解釋器 ( Interpreter ) 環境成功方可.
+   使用計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 自定義創建的 http 伺服器 ( Server ) 應用, 運行需要 Node.js 解釋器 ( Interpreter ) 環境, 所以運行之前, 需對作業系統 ( Operating System ) 安裝配置 Node.js 解釋器 ( Interpreter ) 環境成功方可.
 
-   可在 Linux-Ubuntu 系統的控制臺命令列人機交互介面窗口 ( Ubuntu-bash ) 使用如下指令, 安裝配置 Python 解釋器 ( Interpreter ) 環境 :
+   可在 Linux-Ubuntu 系統的控制臺命令列人機交互介面窗口 ( Ubuntu-bash ) 使用如下指令, 安裝配置 Node.js 解釋器 ( Interpreter ) 環境 :
    ```
-   root@localhost:~# sudo apt install python3
-   root@localhost:~# sudo apt install pip
+   root@localhost:~# sudo apt install nodejs
+   root@localhost:~# sudo apt install npm
    ```
-   可在 Linux-Ubuntu 系統的控制臺命令列人機交互介面窗口 ( Ubuntu-bash ) 使用如下指令, 啓動運行計算機程式設計語言 ( Python ) 創建的 http 伺服器 ( Server ) 應用 :
+   若自定義編制的操作 MariaDB 資料庫的 Node.js 伺服器工程，保存在「/home/TermuxUbuntu/MariaDB/」路徑，可在 Linux-Ubuntu 系統的控制臺命令列人機交互介面窗口 ( Ubuntu-bash ) 使用如下指令, 啓動運行計算機程式設計語言 ( Node.js ) 創建的 http 伺服器 ( Server ) 應用 :
    ```
-   root@localhost:~# ./Database-to-Excel-VBA/MariaDB/PythonToMariaDB/Scripts/python ./Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+   root@localhost:/home/TermuxUbuntu/MariaDB# /usr/bin/node /home/TermuxUbuntu/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
    ```
-   或者 :
+   若爲 Windows 作業系統，可在 Windows 作業系統的 CMD 控制臺命令列人機交互介面窗口 ( Windows-cmd ) 使用如下指令, 啓動運行此計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 創建的 http 伺服器 ( Server ) 應用 :
    ```
-   root@localhost:~# /bin/python3 ./Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+   C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
    ```
 
    另,
@@ -234,19 +238,11 @@ npm - version 10.7.0
 
 Database :
 
+MariaDB - version 10.11
+
 MongoDB mongod - version 8.2.3
 
 MongoDB mongosh - version 2.6.0
-
-Interpreter :
-
-Python - version 3.11.2
-
-pip - version 22.3.1
-
-Database :
-
-MariaDB - version 10.11
 
 ---
 
