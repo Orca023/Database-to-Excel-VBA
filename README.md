@@ -392,7 +392,7 @@ C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/mongosh/mongo
 
 壓縮檔「`MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MariaDB 伺服器端二進位可執行啓動檔 'mariadbd.exe' 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MariaDB/MariaDB10.11/` 内，最終完整路徑應爲「`Database-to-Excel-VBA/MariaDB/MariaDB10.11/bin/mariadbd.exe`」，即可使用如下指令啓動運行資料庫 MariaDB 伺服器應用 : 
 ```
-C:\Database-to-Excel-VBA\MariaDB\MariaDB10.11\bin\mariadbd.exe --defaults-extra-file=C:/Database-to-Excel-VBA/MariaDB/configuring_mariadb_with_option_files.ini --console
+C:\Database-to-Excel-VBA\MariaDB> C:\Database-to-Excel-VBA\MariaDB\MariaDB10.11\bin\mariadbd.exe --defaults-extra-file=C:/Database-to-Excel-VBA/MariaDB/configuring_mariadb_with_option_files.ini --console
 ```
 
 9. 壓縮檔 : `data-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`
