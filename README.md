@@ -3,6 +3,7 @@
 #### Microsoft Office Excel Professional 2019 x86_64
 #### Microsoft Access Professional 2019 x86_64
 #### MongoDB , MariaDB
+#### JavaScript ( Node.js )
 #### 使用電子表格作爲用戶端訪問資料庫實現新增、刪除、修改、查找資料等操作.
 #### 可自定義擴展新增適配數據庫類型.
 
@@ -183,7 +184,7 @@ root@localhost:/home/TermuxUbuntu/MariaDB# /usr/bin/node /home/TermuxUbuntu/Mari
    ```
    若爲 Windows 作業系統，可在 Windows 作業系統的 CMD 控制臺命令列人機交互介面窗口 ( Windows-cmd ) 使用如下指令, 啓動運行此計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 創建的 http 伺服器 ( Server ) 應用 :
    ```
-   C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+   C:\Database-to-Excel-VBA\MongoDB> C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
    ```
 
    另,
@@ -207,7 +208,7 @@ root@localhost:/home/TermuxUbuntu/MariaDB# /usr/bin/node /home/TermuxUbuntu/Mari
    ```
    若爲 Windows 作業系統，可在 Windows 作業系統的 CMD 控制臺命令列人機交互介面窗口 ( Windows-cmd ) 使用如下指令, 啓動運行此計算機程式設計語言 ( JavaScript ) 解釋器 ( Interpreter : Node.js ) 創建的 http 伺服器 ( Server ) 應用 :
    ```
-   C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
+   C:\Database-to-Excel-VBA\MariaDB> C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
    ```
 
    另,
@@ -290,20 +291,6 @@ https://github.com/nodejs
 [程式設計 JavaScript 語言解釋器 ( Interpreter ) 之 Node.js 官方 GitHub 網站倉庫](https://github.com/nodejs/node): 
 https://github.com/nodejs/node.git
 
-Interpreter : Python
-
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方網站](https://www.python.org/): 
-https://www.python.org/
-
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方下載頁](https://www.python.org/downloads/): 
-https://www.python.org/downloads/
-
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/python): 
-https://github.com/python
-
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫頁](https://github.com/python/cpython): 
-https://github.com/python/cpython.git
-
 Database : Microsoft Access
 
 [資料庫 Microsoft Access 應用軟體官方網站](https://www.microsoft.com/en-us/microsoft-365/access): 
@@ -376,15 +363,11 @@ https://pan.baidu.com/s/1jLLxakrQrE8wpXHlr9GX4w?pwd=yyrf
 C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/Nodejs/Nodejs-22.20.0/node.exe C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
 ```
 
-4. 壓縮檔 : `PythonToMariaDB-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`
+4. 壓縮檔 : `NodejsToMariaDB-MariaDB10.11-Window10-AMD_FX8800P_x86_64.7z`
 
-壓縮檔「`PythonToMariaDB-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 使用程式設計語言 ( computer programming language ) : Python 鏈接操作 MariaDB 資料庫的伺服器 'PythonToMariaDB' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Python 解釋器 ( Interpreter ) 運行此資料庫伺服器 'PythonToMariaDB' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MariaDB/PythonToMariaDB/` 内，再因應協調配置壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「'PythonToMariaDB`」項目 : 
+壓縮檔「`NodejsToMariaDB-MariaDB10.11-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 使用程式設計語言 ( computer programming language ) : JavaScript 鏈接操作 MariaDB 資料庫的伺服器 'NodejsToMariaDB' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : JavaScript 解釋器 ( Interpreter ) 運行此資料庫伺服器 'NodejsToMariaDB' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MariaDB/NodejsToMariaDB/` 内，再因應協調配置壓縮檔「`Nodejs-22.20.0-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「'NodejsToMariaDB`」項目 : 
 ```
-C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/Scripts/python.exe C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
-```
-或者 : 
-```
-C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/python.exe C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+C:\Database-to-Excel-VBA\MariaDB> C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
 ```
 
 5. 壓縮檔 : `Server-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`
@@ -411,4 +394,8 @@ C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/mongosh/mongo
 ```
 C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/MariaDB/MariaDB10.11/bin/mysqld.exe
 ```
+
+9. 壓縮檔 : `data-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`
+
+壓縮檔「`data-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MariaDB 伺服器端自定義創建的名爲 'Database1' 資料庫 ( Database ) , 内含名爲 'Collection1' 自定義數據集 ( Collection/Table ) , 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `Database-to-Excel-VBA/MariaDB/data/` 内，可使用資料庫 MariaDB 用戶端應用鏈接伺服器之後，操作處理增、刪、改、查資料集合.
 即可.
