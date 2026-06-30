@@ -40,26 +40,30 @@ https://github.com/VBA-tools/VBA-JSON.git
 
 九. 啓動 MongoDB 資料庫的伺服端應用 ( Server ) 伺服器 :
 ```
-`C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/Server/8.2/bin/mongod.exe --config=C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/mongod.cfg`
+C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/Server/8.2/bin/mongod.exe --config=C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/mongod.cfg
 ```
 
 十. 啓動自定義的操作 MongoDB 資料庫的 Node.js 伺服器 :
 ```
-`C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/Nodejs/Nodejs-22.20.0/node.exe C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1`
+C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/Nodejs/Nodejs-22.20.0/node.exe C:/Database-to-Excel-VBA/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
 ```
 
 十一. 啓動 MariaDB 資料庫的伺服端應用 ( Server ) 伺服器 :
 ```
-`C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/MariaDB/MariaDB10.11/bin/mysqld.exe`
+C:\Database-to-Excel-VBA\MariaDB\MariaDB10.11\bin\mariadbd.exe --defaults-extra-file=C:/Database-to-Excel-VBA/MariaDB/configuring_mariadb_with_option_files.ini --console
+```
+若爲 Android - Termux - Ubuntu 系統，可使用如下指令，在後臺啓動運行 MariaDB 資料庫的伺服端應用 ( Server ) 伺服器 :
+```
+root@localhost:~# /etc/init.d/mariadb start --defaults-extra-file=/etc/mysql/my.cnf
 ```
 
-十二. 啓動自定義的操作 MariaDB 資料庫的 Python 伺服器 :
+十二. 啓動自定義的操作 MariaDB 資料庫的 Node.js 伺服器 :
 ```
-C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/Scripts/python.exe C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+C:\Database-to-Excel-VBA\Nodejs\Nodejs-22.20.0\node.exe C:/Database-to-Excel-VBA/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
 ```
-或者 : 
+若爲 Android - Termux - Ubuntu 系統，若自定義編制的操作 MariaDB 資料庫的 Node.js 伺服器工程，保存在「/home/TermuxUbuntu/MariaDB/」路徑，可使用如下指令，啓動運行自定義的操作 MariaDB 資料庫的 Node.js 伺服器 :
 ```
-C:\Database-to-Excel-VBA\MariaDB> C:/Database-to-Excel-VBA/Python/Python311/python.exe C:/Database-to-Excel-VBA/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+root@localhost:/home/TermuxUbuntu/MariaDB# /usr/bin/node /home/TermuxUbuntu/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
 ```
 
 十三. 運行 Microsoft Office Excel VBA 宏擴展應用 : `Database-to-Excel-VBA` 選擇 `operation panel` 選項, 從 Microsoft Excel 應用的「`加載項 ( add-in )`」菜單裏, 選擇 : 「 `Manipulate database` 」 → 「 `operation panel` 」, 加載顯示 `operation panel` 人機交互介面.
