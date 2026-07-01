@@ -404,4 +404,38 @@ C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/Server/8.2/bi
 C:\Database-to-Excel-VBA\MongoDB> C:/Database-to-Excel-VBA/MongoDB/mongosh/mongosh.exe mongodb://username:password@[::1]:27017/Database1
 ```
 
+9. 壓縮檔 : `NodejsToMariaDB_google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64.tar.gz`
+
+壓縮檔「`NodejsToMariaDB_google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 自定義編制的操作 MariaDB 資料庫的 Node.js 伺服器 ( Server ) 工程「'NodejsToMariaDB'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/TermuxUbuntu/` 内，然後再使用如下指令解壓縮 : 
+```
+root@localhost:/home/TermuxUbuntu# tar -zxvf /home/TermuxUbuntu/NodejsToMariaDB_google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64.tar.gz
+```
+最終應保存爲檔案夾 ( folder ) : `/home/TermuxUbuntu/MariaDB/NodejsToMariaDB/` 形式.
+
+然後，再使用如下指令修改程式設計語言 : JavaScript ( Node.js ) 代碼脚本檔「`/home/TermuxUbuntu/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js`」的權限爲所有用戶可讀可寫可執行權限 :
+```
+root@localhost:/home/TermuxUbuntu/MariaDB# chmod 777 /home/TermuxUbuntu/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js
+```
+然後，再使用如下指令修改參數配置文檔「`/home/TermuxUbuntu/MariaDB/configuring_mariadb_with_option_files.cnf`」的權限爲所有用戶可讀可寫權限 :
+```
+root@localhost:/home/TermuxUbuntu/MariaDB# chmod 666 /home/TermuxUbuntu/MariaDB/configuring_mariadb_with_option_files.cnf
+```
+繼續，需使用如下指令，先在後臺啓動隱藏運行 MariaDB 資料庫的伺服端應用 ( Server ) 伺服器 :
+```
+root@localhost:~# /etc/init.d/mariadb start --defaults-extra-file=/home/TermuxUbuntu/MariaDB/configuring_mariadb_with_option_files.cnf
+```
+如需要，可使用如下指令查看正在後臺隱藏運行的 MariaDB 資料庫伺服端應用 ( Server ) 伺服器的運行狀態 :
+```
+root@localhost:~# /etc/init.d/mariadb status
+```
+然後，即可使用如下指令啓動運行自定義編制的操作 MariaDB 資料庫的 Node.js 伺服器「'NodejsToMariaDB'」應用 : 
+```
+root@localhost:/home/TermuxUbuntu/MariaDB# /usr/bin/node /home/TermuxUbuntu/MariaDB/NodejsToMariaDB/Nodejs2MariadbServer.js host=::0 port=3308 number_cluster_Workers=0 MariadbHost=[::1] MariadbPort=3306 dbUser=admin_Database1 dbPass=admin dbName=Database1
+```
+鍵盤同時按住「Ctrl」+「c」鍵輸入，即可關閉正在運行的自定義的操作 MariaDB 資料庫的 Node.js 伺服器 ( Server ) 應用.
+可使用如下指令關閉正在後臺隱藏運行的 MariaDB 資料庫伺服端 ( Server ) 應用 :
+```
+root@localhost:~# /etc/init.d/mariadb stop
+```
+
 即可.
