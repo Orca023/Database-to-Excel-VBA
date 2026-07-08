@@ -11,7 +11,7 @@ C:\> C:\Database-to-Excel-VBA\Redis\Redis-3.2.100\redis-server.exe C:/Database-t
 dir C:/Database-to-Excel-VBA/Redis/data/
 logfile "C:/Database-to-Excel-VBA/Redis/server_log.txt"
 
-對於 Linux-Ubuntu 系統，啓動 Redis 資料庫伺服器之前，需在自定義指定的配置文檔「configuring_redis_with_option_files.conf」裏，需要修改條目參數爲如下值：
+對於 Android-Termux-Ubuntu 系統，假設持久化保存的自定義路徑預設爲「/home/TermuxUbuntu/Redis/data/」，則需在啓動 Redis 資料庫伺服器之前，在自定義指定的配置文檔「configuring_redis_with_option_files.conf」裏，需要修改條目參數爲如下值：
 dir /home/TermuxUbuntu/Redis/data/
 logfile /home/TermuxUbuntu/Redis/redis-server.log
 pidfile /home/TermuxUbuntu/Redis/redis-server.pid
