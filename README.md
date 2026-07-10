@@ -348,6 +348,23 @@ https://github.com/MariaDB
 [資料庫 MariaDB 應用軟體官方 GitHub 網站倉庫](https://github.com/MariaDB/server): 
 https://github.com/MariaDB/server.git
 
+Database : Redis
+
+[資料庫 Redis 應用軟體官方網站](https://redis.io/): 
+https://redis.io/
+
+[資料庫 Redis 應用軟體官方手冊](https://redis.io/docs/latest/develop/get-started/document-database/): 
+https://redis.io/docs/latest/develop/get-started/document-database/
+
+[資料庫 Redis 應用軟體下載安裝官方網站](https://redis.io/docs/latest/operate/oss_and_stack/install/install-stack/): 
+https://redis.io/docs/latest/operate/oss_and_stack/install/install-stack/
+
+[資料庫 Redis 應用軟體官方 GitHub 網站賬戶](https://github.com/redis): 
+https://github.com/redis
+
+[資料庫 Redis 應用軟體官方 GitHub 網站倉庫](https://github.com/redis/redis): 
+https://github.com/redis/redis.git
+
 ---
 
 開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境的壓縮檔 ( .zip .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1jLLxakrQrE8wpXHlr9GX4w?pwd=yyrf) 下載頁: 
